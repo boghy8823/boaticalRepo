@@ -1,0 +1,34 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+less
+jquery
+underscore
+accounts-password
+accounts-facebook
+accounts-ui
+accounts-twitter
+aldeed:collection2
+iron:router
+raix:handlebar-helpers
+nooitaf:semantic-ui-less
+matteodem:easy-security
+audit-argument-checks
+fastclick
+zimme:iron-router-active
+manuelschoebel:ms-seo
+browser-policy
+useraccounts:semantic-ui
+natestrauser:animate-css
+dburles:collection-helpers
+meteorhacks:fast-render
+
+mizzao:bootstrap-3
+aldeed:autoform
+gabrielhpugliese:supercalendar
+twbs:bootstrap
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker

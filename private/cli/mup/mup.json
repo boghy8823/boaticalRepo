@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "host": "hostname",
+      "username": "root",
+      "password": "password"
+    }
+  ],
+
+  "setupMongo": __setupMongo__,
+  "setupNode": __setupNode__,
+  "nodeVersion": "0.10.31",
+  "setupPhantom": false,
+
+  "appName": "Boatical",
+  "app": "__appPath__",
+
+  "env": {
+    "ROOT_URL": "dev.boatical.com"
+  },
+
+  "deployCheckWaitTime": 15
+}

@@ -1,0 +1,36 @@
+<template name="add-boat">
+	<div class="post-new-boat-wrapper">
+		<div class=" container post-new-boat">
+		  	<p class="post-boat-title">Post new boat</p>
+		  	<p class="post-boat-body">here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+		</div>
+	</div>  
+  <div class="container wrapper">		
+	{{> quickForm collection="Boat" id="insertBookForm" type="update" doc=this fields="boatType,length,capacity,location"}}	  
+  </div>
+  <div class="mission-statements">
+  	<div class="container">
+  		<div class="col-md-4">
+        <div class="trust-icon"></div>
+  			<p class="mission-title">Trust & Safety</p>
+  			<p class="mission-body">Vestibulum ac diam et massa tincidunt viverra vitae non sapien. In tristique consectetur arcu ac venenatis. Aliquam erat volutpat. Nam felis velit, auctor ac odio idhendrerit.</p></div>
+  		<div class="col-md-4">
+        <div class="host-icon"></div>
+  			<p class="mission-title">Host Guarantee</p>
+  			<p class="mission-body">Vestibulum ac diam et massa tincidunt viverra vitae non sapien. In tristique consectetur arcu ac venenatis. Aliquam erat volutpat. Nam felis velit, auctor ac odio idhendrerit.</p>
+  		</div>
+  		<div class="col-md-4">
+        <div class="secure-icon"></div>
+  			<p class="mission-title">Secure Payments</p>
+  			<p class="mission-body">Vestibulum ac diam et massa tincidunt viverra vitae non sapien. In tristique consectetur arcu ac venenatis. Aliquam erat volutpat. Nam felis velit, auctor ac odio idhendrerit.</p>
+  		</div>
+  	</div>	
+  </div>
+  
+  <!-- {{#autoForm id="insertBookForm" type="update" collection="Books" doc=this autosave=true}}
+          {{> afFormGroup name="capacity" label=false}}
+  {{/autoForm}} -->
+
+	
+
+</template>

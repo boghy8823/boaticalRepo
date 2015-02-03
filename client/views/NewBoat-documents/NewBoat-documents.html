@@ -1,0 +1,58 @@
+<template name="NewBoat-documents">
+<div class="container dashboard-wrapper">
+        <div class="row">
+            <div class="dashboard col-md-2"><a href="/dashboard">Dashboard</a></div><!--
+            --><div class="messages col-md-2"><a href="/dashboard/messages">Messages</a></div><!--
+            --><div class="boats current-boats col-md-2"><a href="/dashboard/my-boats">My Boats</a></div><!--
+            --><div class="bookings col-md-2"><a href="/dashboard/my-jobs">My Jobs</a></div><!--
+            --><div class="profile col-md-2"><a href="/dashboard/my-trips">My Trips</a></div><!--
+            --><div class="account col-md-2"><a href="/dashboard/account">Account</a></div>
+        </div>
+    </div>
+    <div class="container submenu-wrapper">
+        <a href="#" class=" active manage-boats">Manage Boats</a>
+        <a href="/dashboard/my-boats/manage-bookings" class="manage-bookings">Manage Bookings</a>
+        <div class="container tabs-wrapper" style="border: 1px solid darkgray; padding: 20px;">
+            <div class="section-title">Post New Boat</div>
+            <div class="go-back-boats"><a href="/dashboard/my-boats">All Boats</a></div>
+            
+            <table class="tabbed-nav col-md-3">
+                <tbody>
+                    <th>Basic Information</th>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/calendar">Calendar</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/pricing">Pricing</a> </td>
+                    </tr>
+                    <th>Description</th>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/overview">Overview</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/listing">Listing</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/spaces">Spaces</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/photos">Photos</a> </td>
+                    </tr>
+                    <th>Settings</th>
+                    <tr>
+                        <td> <a href="/dashboard/my-boats/manage-boats/location">Location</a> </td>
+                    </tr>
+                    <tr>
+                        <td class="active"> <a href="/dashboard/my-boats/manage-boats/documents">Documents</a> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="display: inline-block;">
+                {{> quickForm collection="Boat" id="pricingBoatForm" type="update"  doc=this autosave=true fields="boatFlag,boatName,boatRegistrationNumber,loydRegistered"}}
+                 
+            </div>
+    		<p style="display: inline-block; vertical-align: top; margin-left: 25%;">Documents Forms</p>
+    	</div>
+    	
+    </div>
+</template>

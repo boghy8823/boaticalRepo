@@ -1,0 +1,566 @@
+// General styles, e. g. for the body tag
+@import 'helpers';
+@import 'variables';
+@import 'lib/elements';
+@import 'fonts';
+/* -------------------
+    Main Content
+   ------------------- */
+
+body, #main {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    color: @primaryFontColor;
+    background-color: #f5f5f5;
+}
+
+a {
+    color: inherit;
+    transition: 0.3s color;
+
+    &:hover {
+        color: @primaryLinkHoverColor;
+    }
+}
+
+.icon {
+    &.orange {
+        color: @html5Orange;
+    }
+}
+
+.ui.header {
+    font-family: 'Glegoo', serif;
+}
+
+.site-wrapper {
+    margin: 0 auto;
+    max-width: @largeDesktopWidth;
+}
+
+/* -------------------
+    Footer
+   ------------------- */
+.footer {
+    border-top: 1px solid #CCCED3;
+    padding-top: 26px;
+    margin-top: 50px;
+}
+
+.footer div{
+    display: inline-block;
+    text-align: left;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    color: #5b6270;
+}
+
+.footer ul {
+    margin-top: 22px;
+}
+
+.footer div *{
+    padding: 0px;
+    list-style-type: none;
+    font-size: 11px;
+    color:#9099a5;
+    font-family: "OpenSansRegular", sans-serif;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* ------------------------------------------
+    Dashboard
+    -----------------------------------------*/
+
+.dashboard, .messages, .boats, .bookings, .profile, .account {
+    display: inline-block;
+    height: 60px;
+    background: #FFF;
+    border-top: 1px solid #dce0e0;
+    border-bottom: 1px solid #dce0e0;
+    border-left: 1px solid #dce0e0;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6a7180;
+    padding: 23px 0px 19px 20px;
+}
+
+.account {
+    border-right : 1px solid #dce0e0;
+}
+
+.dashboard:hover,
+.messages:hover,
+.boats:hover,
+.bookings:hover,
+.profile:hover,
+.account:hover {
+    color: #264585;
+    opacity: 0.7;
+    text-decoration: none;
+    border-bottom: 3px solid #264585;
+    cursor: pointer;
+}
+
+.dashboard a:hover, .messages a:hover, .boats a:hover, .bookings a:hover, .profile a:hover, .account a:hover { 
+    text-decoration: none;
+    color: #264585;
+}
+
+.dashboard:hover > a:before {
+    background-image: url('/images/icons/active_dashboard.png');
+}
+
+.messages:hover > a:before {
+    background-image: url('/images/icons/active_messages.png');
+}
+
+.boats:hover > a:before {
+    background-image: url('/images/icons/active_boats.png');
+}
+
+.bookings:hover > a:before {
+    background-image: url('/images/icons/active_bookings.png');
+}
+
+.profile:hover > a:before {
+    background-image: url('/images/icons/active_profile.png');
+}
+
+.account:hover > a:before {
+    background-image: url('/images/icons/active_account.png');
+}
+
+.dashboard a::before, 
+.messages a::before,
+.boats a::before,
+.bookings a::before,
+.profile a::before, 
+.account a::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.dashboard a::before {
+    background-image: url('/images/icons/dashboard.png');
+}
+
+.messages a::before {
+    background-image: url('/images/icons/messages.png');   
+}
+
+.boats a::before {
+    background-image: url('/images/icons/boats.png');
+}
+
+.bookings a::before {
+    background-image: url('/images/icons/bookings.png');
+}
+
+.profile a::before {
+    background-image: url('/images/icons/profile.png');
+}
+
+.account a::before {
+    background-image: url('/images/icons/account.png');
+}
+
+
+.current-dashboard a::before {
+    background-image: url('/images/icons/active_dashboard.png') !important;
+}
+
+.current-dashboard {
+    border-bottom: 3px solid #264585;
+}
+
+.current-messages a::before {
+    background-image: url('/images/icons/active_messages.png') !important;
+}
+
+.current-messages {
+    border-bottom: 3px solid #264585;
+}
+
+.current-boats a::before {
+    background-image: url('/images/icons/active_boats.png') !important;
+}
+
+.current-boats {
+    border-bottom: 3px solid #264585;
+}
+
+.current-bookings a::before {
+    background-image: url('/images/icons/active_bookings.png') !important;
+}
+
+.current-bookings {
+    border-bottom: 3px solid #264585;
+}
+
+.current-profile a::before {
+    background-image: url('/images/icons/active_profile.png') !important;
+}
+
+.current-profile {
+    border-bottom: 3px solid #264585;
+}
+
+
+.current-account a::before {
+    background-image: url('/images/icons/active_account.png') !important;
+}
+
+.current-account {
+    border-bottom: 3px solid #264585;
+}
+
+.notification-header {
+    height: 60px;
+    background: #eaeaea;
+    padding: 20px 0px 20px 25px;
+    font-family: "OpenSansLight", sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    color: #6a7180;
+}
+
+.dashboard-wrapper {
+    padding-top: 30px;
+}
+
+.brief-profile,  .alerts, .messages-notifications{
+    margin: 30px 25px 30px 0px;
+    border: 1px solid #e2e0e0;
+    border-radius: 3px;
+    width: 48.9%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.verifications,  .invitations {
+    margin: 30px 0px 30px 0px;
+    border: 1px solid #e2e0e0;
+    width: 48.9%;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.verification-icons {
+    padding-left: 25px;
+}
+
+
+
+.profile-picture {
+    width: 122px;
+    height: 122px;
+    display: inline-block;
+    background-image: url('../images/dexter3.jpg');
+    background-size: cover;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.profile-link-group {
+    vertical-align: top;
+    margin-top: 60px;
+}
+
+.profile-link-group, .profile-edit, .profile-view { 
+    display: inline-block;
+}
+
+.profile-edit, .profile-view {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 14px 15px 0px 0px;
+    text-decoration: underline;
+    color: #ee2725;
+ }
+
+.profile-edit:hover , .profile-view:hover,
+.profile-edit a:hover , .profile-view a:hover { 
+    color: #ee2725;
+    opacity: 0.7;
+}
+
+.profile-name { 
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #5b6270;
+}
+
+.alerts-info {
+    padding: 30px 20px;    
+}
+
+.notification-information {
+    background-color: #FFF;
+}
+
+.notification-information p {
+    padding: 10px 10px 10px 25px;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #6a7180;
+}
+
+.email-verification {
+    padding: 0px 35px 25px 10px;
+    font-size: 16px;
+    font-family: "OpenSansRegular", sans-serif;
+    line-height: 20px;
+    color: #5b6270;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.phone-verification {
+    padding: 0px 35px 25px 10px;
+    font-size: 16px;
+    font-family: "OpenSansRegular", sans-serif;
+    line-height: 20px;
+    color: #5b6270;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.phone-verification li + li {
+    color: #8ec975;
+    font-size: 14px;
+}
+
+.email-verification li + li { 
+    color: #8ec975;
+    font-size: 14px;
+}
+
+.verified-phone, .verified-email {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.facebook-connect,
+.twitter-connect,
+.google-connect {
+    display: inline-block;
+    vertical-align: top;
+    width: 172px;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #dce0e0;
+}
+
+.facebook-connect {
+    background-color: #4264aa;
+    color: #FFF;
+}
+
+.twitter-connect {
+    background-color: #55acee;
+    color: #FFF;
+}
+
+.google-connect {
+    background-color: #FFF;
+    color: #dd4b39;
+}
+
+.facebook-connect:hover,
+.twitter-connect:hover,
+.google-connect:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.social-connect {
+    padding: 0px 20px 30px 25px;
+}
+
+.messages-notifications {
+    margin-top: -65px;
+}
+
+.invitations { 
+    margin-top: 0px;
+}
+
+.alerts {
+    margin-top: -86px;
+}
+
+.alert-body {
+    height: auto;
+    background: #feefef;
+    width: auto;
+    margin-top: 3px;
+}
+
+.alert-body p {
+    padding: 5px 10px 0px 15px;
+    display: inline-block;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    color: #6a7180;
+}
+
+.invitation-button { 
+    width: 190px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 27px;
+    line-height: 50px;
+    background: #ee2725;
+    border-radius: 3px;
+    text-align: center;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.invitation-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.invitation-text {
+    width: 64%;
+    display: inline-block;
+}
+
+.glyphicon-remove {
+    color: #6a7180;
+}
+
+#insertBookForm {
+    width: 60%;
+    margin: 50px auto 60px auto;
+}
+
+#insertBookForm input,
+#insertBookForm select {
+    display: inline-block;
+    width: 310px;
+    border: 1px solid #e2e2e2;
+    margin-left: 25px;
+    border-radius: 0px;
+    height: 42px;
+}
+
+#insertBookForm label {
+    font-family: "OpenSansRegular", sans-serif;
+    font-weight: 300;
+    color: #4d5464;
+    font-size: 18px;
+}
+
+#insertBookForm button {
+    width: 200px;
+    height: 60px;
+    background-color: #ee2724;
+    color: #FFF;
+    border: 1px solid #ee2724;
+    border-radius: 3px;
+    margin-top: 55px;
+}
+
+.mission-statements {
+    height: 500px;
+    background-color: #FFF;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 80px;
+}
+
+.mission-statements p {
+    text-align: center;
+}
+
+.mission-title {
+    font-size: 28px;
+    line-height: 22px;
+    color: #000;
+    font-family: "OpenSansRegular", sans-serif;
+}
+
+.mission-body {
+    font-size: 16px;
+    line-height: 30px;
+    color: #4d5464;
+    font-family: "OpenSansRegular", sans-serif;   
+}
+
+.post-new-boat-wrapper {
+    background: #FFF;
+    border-bottom: 1px solid #e2e2e2;
+}
+.post-new-boat {
+    height: 150px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+.post-boat-title { 
+    font-size: 24px;
+    color: #ee2725;
+    line-height: 22px;
+    font-family: "OpenSansRegular", sans-serif;
+}
+
+.post-boat-body{ 
+    font-size: 18px;
+    color: #6a7180;
+    line-height: 26px;
+    font-family: "OpenSansRegular", sans-serif;
+}
+
+.trust-icon {
+    background-image: url('../images/icons/trust-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 135px;
+    height: 135px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.host-icon {
+    background-image: url('../images/icons/host-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 139px;
+    height: 135px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.secure-icon {
+    background-image: url('../images/icons/secure-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 135px;
+    height: 135px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}

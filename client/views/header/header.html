@@ -1,0 +1,48 @@
+<template name="header">
+    <div class="center aligned {{isActive}} header-wrapper container">
+        <div class="logo"><a href="/"><img src="../images/logo.png"></a></div>
+        <input class="header-search" type="text">
+        {{#if currentUser}}
+                <div class="logged-user">{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}
+                <div class="header-help">Help<a href="/add" class="header-add-boat">Add your boat</a>    </div>
+                
+                 {{#if showMenu}}
+                    <ul class="user-dropdown-menu {{animateDropdown}}">
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">My Boats</a></li>
+                        <li><a href="#">My Bookings</a></li>
+                        <li><a href="#">Messages</a></li>
+                        <li><a href="#">Invite your friends</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="log-out">Log out</li>
+                    </ul>
+                {{else}}
+                {{/if}}
+                </div>
+
+                 {{#if showLogin}}
+                    <div class="login-wrapper {{animateClass}} animated"></div>
+                  {{/if}}
+
+               
+        {{else}}
+                
+                <div class="header-help">Help</div>
+                <div class="login-button">login</div>
+                 {{#if showLogin}}
+                    <div class="login-wrapper {{animateClass}} animated">
+                        {{#if currentUser}}
+
+                        {{else}}
+                        {{> atForm }}
+                        {{/if}}
+                    </div>
+                    {{/if}}
+        {{/if}}
+       
+       
+    </div>
+</template>
+

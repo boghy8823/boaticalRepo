@@ -1,0 +1,75 @@
+	<template name="dashboard">
+   <div class="container dashboard-wrapper">
+     	<div class="row">
+		    <div class="dashboard current-dashboard col-md-2"><a href="/dashboard">Dashboard</a></div><!--
+		    --><div class="messages col-md-2"><a href="/dashboard/messages">Messages</a></div><!--
+		    --><div class="boats col-md-2"><a href="/dashboard/my-boats">My Boats</a></div><!--
+		    --><div class="bookings col-md-2"><a href="/dashboard/my-jobs">My Jobs</a></div><!--
+		    --><div class="profile col-md-2"><a href="/dashboard/my-trips">My Trips</a></div><!--
+		    --><div class="account col-md-2"><a href="/dashboard/account">Account</a></div>
+		</div>
+    </div>
+    <div class="container main-dashboard">
+    	<div class="row">
+    		<div class="brief-profile">
+    			<div class="notification-header">Profile</div><!--
+    			--><div class="notification-information">
+    					<div class="profile-picture"></div>
+    					
+    					<div class="profile-link-group">
+    						<div class="profile-name">{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</div>
+    						<div class="profile-edit"><a href="#">Edit my profile</a></div>
+    						<div class="profile-view"><a href="#">View my profile</a></div>
+    					</div>
+    			   </div>
+    		</div><!--
+    		--><div class="verifications">
+    			<div class="notification-header">Verifications</div><!--
+    			--><div class="notification-information">
+    				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </p>
+    				<div class="verification-icons">
+    					<img class="verified-email" src="../images/verified_email.png">
+    					<ul class="email-verification">
+    						<li>Email Address</li>
+    						<li>Verified</li>
+    					</ul>
+    					<img class="verified-phone" src="../images/verified_phone.png">
+    					<ul class="phone-verification">
+    						<li>Phone Number</li>
+    						<li>Verified</li>
+    					</ul>
+    				</div>
+    				<div class="social-connect">
+    					<div class="facebook-connect">Connect with Facebook</div>
+    					<div class="twitter-connect">Connect with Twitter</div>
+    					<div class="google-connect">Connect with Google</div>
+    				</div>
+    			</div><!--
+    		--></div>
+    	</div>
+    	<div class="row">
+    		<div class="alerts">
+    			<div class="notification-header">Alerts</div><!--
+    			--><div class="notification-information alerts-info">
+    				<div class="alert-body"><p>Please add a payment method to your account as soon as possible</p><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+    				<div class="alert-body"><p>We've updated how email addresses are displayed from now on....</p><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+    			</div>
+    		</div><!--
+    		--><div class="invitations">
+    			<div class="notification-header">Invite friends, earn travel credit!</div>
+    			<div class="notification-information">
+    				<p class="invitation-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+    				<div class="invitation-button">Invite friends</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="messages-notifications">
+    			<div class="notification-header">Messages</div><!--
+    			--><div class="notification-information">
+    					<p>You have no messages at this moment</p>
+    			   </div>
+    		</div>
+    	</div>
+    </div>
+</template>

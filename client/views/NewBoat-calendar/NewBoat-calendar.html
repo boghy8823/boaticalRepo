@@ -1,0 +1,84 @@
+<template name="NewBoat-calendar">
+<div class="container dashboard-wrapper">
+     	<div class="row">
+		    <div class="dashboard col-md-2"><a href="/dashboard">Dashboard</a></div><!--
+		    --><div class="messages col-md-2"><a href="/dashboard/messages">Messages</a></div><!--
+		    --><div class="boats current-boats col-md-2"><a href="/dashboard/my-boats">My Boats</a></div><!--
+		    --><div class="bookings col-md-2"><a href="/dashboard/my-jobs">My Jobs</a></div><!--
+		    --><div class="profile col-md-2"><a href="/dashboard/my-trips">My Trips</a></div><!--
+		    --><div class="account col-md-2"><a href="/dashboard/account">Account</a></div>
+		</div>
+    </div>
+    <div class="container submenu-wrapper">
+    	<a href="#" class=" active manage-boats">Manage Boats</a>
+    	<a href="/dashboard/my-boats/manage-bookings" class="manage-bookings">Manage Bookings</a>
+    	<div class="container tabs-wrapper" style="border: 1px solid darkgray; padding: 20px;">
+            <div class="section-title">Post New Boat</div>
+            <div class="go-back-boats"><a href="/dashboard/my-boats">All Boats</a></div>
+    		
+            <table class="tabbed-nav col-md-3">
+    			<tbody>
+    				<th>Basic Information</th>
+    				<tr>
+    					<td class="active"> <a href="/dashboard/my-boats/manage-boats/calendar">Calendar</a> </td>
+    				</tr>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/pricing">Pricing</a> </td>
+    				</tr>
+    				<th>Description</th>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/overview">Overview</a> </td>
+    				</tr>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/listing">Listing</a> </td>
+    				</tr>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/spaces">Spaces</a> </td>
+    				</tr>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/photos">Photos</a> </td>
+    				</tr>
+    				<th>Settings</th>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/location">Location</a> </td>
+    				</tr>
+    				<tr>
+    					<td> <a href="/dashboard/my-boats/manage-boats/documents">Documents</a> </td>
+    				</tr>
+    			</tbody>
+    		</table>
+            <div class="calendar-forms-wrapper col-md-9">
+        		<div class="calendar-forms">
+                    <div class="calendar-headline">When is your listing available?</div>
+                      <div class='calendar-icons-wrapper'>
+                       {{#autoForm id="calendarBoatForm" doc=this collection="Boat"}}
+                      <div class="form-group">
+                           <div class="always-available-wrapper">
+                            {{> afFieldInput name="alwaysAvailable" class="input-always-available" type="bootstrap-datepicker" buttonClasses="glyphicon glyphicon-calendar open-always-available"}}
+                            <p><span>Always available</span><br>
+                                Mark your boat as always available if it is mostly available, and then select the specific days that is not available.</p>
+                                
+                        </div>
+                        <div class="always-unavailable-wrapper">
+                            {{> afFieldInput name="alwaysUnavailable"  class="input-always-unavailable" type="bootstrap-datepicker" buttonClasses="glyphicon glyphicon-calendar open-always-unavailable"}}   
+                            <p><span>Always unavailable</span><br>
+                                Mark your boat as always unavailable if it is mostly unavailable, and then select the specific days that is available.</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    {{/autoForm}}  
+                  
+                     
+                       
+                    </div>
+
+                 
+                               
+                </div>
+            </div>
+    	</div>
+    	
+    </div>
+</template>

@@ -1,0 +1,119 @@
+@import 'variables';
+@import 'lib/elements';
+
+
+.logo {
+    float: left;
+}
+
+.logged-user {
+    float: right;
+    padding-top: 10px;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    color: #6a7180;
+}
+header {
+    background-color: #FFF;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.header-wrapper {
+    height: 80px;
+    padding: 15px 0 0 0!important;
+
+}
+
+.header-search {
+    height: 40px;
+    width: 165px;
+    float: left;
+    margin-left: 30px;
+    border-radius: 20px;
+    border: 1px solid #ecf0f1;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+.login-button, .header-help {
+    float: right;
+}
+
+.header-help {
+    margin-left: 10px;
+}
+.user-dropdown-menu li {
+    width: 176px;
+    list-style-type: none;
+    text-align: left;
+    padding-top: 15px;
+    color: #8A8E98;
+    font-family: Helvetica, sans-serif;
+}
+
+.user-dropdown-menu {
+    position: absolute;
+    overflow: hidden;
+    right: inherit;
+    z-index: 2;
+    padding-left: 30px;
+    background: #FFF;
+    border: 1px solid #8A8E98;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.log-out:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.logged-user:hover {
+    cursor: pointer;
+}
+
+.header-add-boat {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 21px;
+    margin-top: -10px;
+    margin-left: 30px;
+    border-radius: 3px;   
+    background: #ee2725;
+    font-family: "OpenSansRegular", sans-serif;
+    font-size:14px;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration:none;
+}
+
+.header-add-boat:hover {
+    text-decoration: none;
+    color: #FFF;
+    opacity: 0.7;    
+}
+
+#main .login-wrapper {
+    max-width: @loginFormWidth;
+    margin: 2em auto 0 auto;
+    color: @secondaryFontColor;
+
+    .at-form {
+        padding: 1em;
+        background-color: rgba(0, 0,0, 0.5);
+        border-radius: 0.4em;
+        .ui.form .at-input.field > label { color: @secondaryFontColor; }
+    }
+
+    .actions-wrapper {
+        max-width: @loginFormWidth / 2;
+        margin: 0 auto;
+    }
+
+    .hello {
+        margin-bottom: 1.8em;
+    }
+}
